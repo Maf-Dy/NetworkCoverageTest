@@ -6,7 +6,7 @@ android {
     signingConfigs {
         ReleaseConfig {
 
-        storeFile file('C:\\Users\\mafdy magdy\\AndroidStudioProjects\\NetworkCoverageTest\\networkcoveragetest.jks')
+        storeFile file('../networkcoveragetest.jks')
             storePassword 'test12'
             keyAlias 'key0'
             keyPassword 'test12'
