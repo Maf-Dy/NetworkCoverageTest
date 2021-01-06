@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/chart1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_line"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#eeeeee"
+            android:max="80"
+            app:indicatorDirectionLinear="startToEnd"
+            app:showAnimationBehavior="outward"
+            app:showDelay="100"
+            app:trackColor="#dddddd"
+            app:trackCornerRadius="2dp"
+            app:trackThickness="20dp"></com.google.android.material.progressindicator.LinearProgressIndicator>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progressline_text1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:autoSizeTextType="uniform"
+            android:text="RSRP:       "
+            />
+
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_line2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="30"
+            app:indicatorDirectionLinear="startToEnd"
+            app:showAnimationBehavior="outward"
+            app:showDelay="100"
+            app:trackColor="#dddddd"
+            app:trackCornerRadius="2dp"
+            app:trackThickness="20dp"></com.google.android.material.progressindicator.LinearProgressIndicator>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progressline_text2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="RSRQ:       "
+            />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_line3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="40"
+            app:indicatorDirectionLinear="startToEnd"
+            app:showAnimationBehavior="outward"
+            app:showDelay="100"
+            app:trackColor="#dddddd"
+            app:trackCornerRadius="2dp"
+            app:trackThickness="20dp"></com.google.android.material.progressindicator.LinearProgressIndicator>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progressline_text3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="SINR:       "
+            />
+
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chart2"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+
+        />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chart3"
+        app:layout_constraintTop_toBottomOf="@id/chart1"
+
+        />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chart2"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
